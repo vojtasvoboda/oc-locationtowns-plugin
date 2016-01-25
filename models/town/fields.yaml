@@ -1,0 +1,27 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    state:
+        label: State
+        type: relation
+        nameFrom: name
+    name:
+        label: Name
+        searchable: true
+    slug:
+        label: URL
+        searchable: true
+        preset:
+            field: name
+            type: slug
+    excerpt:
+        label: Excerpt
+    description:
+        name: Description
+        type: richeditor
+        size: huge
+    is_enabled:
+        label: Enabled
+        type: checkbox

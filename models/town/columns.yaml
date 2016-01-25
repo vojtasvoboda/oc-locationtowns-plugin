@@ -1,0 +1,25 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: Name
+        searchable: true
+    state:
+        relation: state
+        select: name
+    slug:
+        name: URL
+        searchable: true
+        preset:
+            field: name
+            type: slug
+    excerpt:
+        name: Excerpt
+    is_enabled:
+        label: Enabled
+        type: checkbox

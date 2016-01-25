@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Town
+
+# Model Form Field configuration
+form: $/vojtasvoboda/locationtown/models/town/fields.yaml
+
+# Model Class name
+modelClass: VojtaSvoboda\LocationTown\Models\Town
+
+# Default redirect location
+defaultRedirect: vojtasvoboda/locationtown/towns
+
+# Create page
+create:
+    title: Create Town
+    redirect: vojtasvoboda/locationtown/towns
+    redirectClose: vojtasvoboda/locationtown/towns
+
+# Update page
+update:
+    title: Edit Town
+    redirect: vojtasvoboda/locationtown/towns
+    redirectClose: vojtasvoboda/locationtown/towns
+
+# Preview page
+preview:
+    title: Preview Town

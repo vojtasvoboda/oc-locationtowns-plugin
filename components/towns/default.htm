@@ -1,0 +1,28 @@
+<ul class="town-list">
+    {% for town in towns %}
+    <li class="town">
+        <h3><a href="{{ town.url }}">{{ town.name }}</a></h3>
+        <p class="excerpt">{{ town.excerpt }}</p>
+    </li>
+    {% else %}
+    <li class="no-data">{{ noTownsMessage }}</li>
+    {% endfor %}
+</ul>
+
+{% if towns.lastPage > 1 %}
+<ul class="pagination">
+    {% if towns.currentPage > 1 %}
+    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (towns.currentPage-1) }) }}">&larr; Prev</a></li>
+    {% endif %}
+
+    {% for page in 1..towns.lastPage %}
+    <li class="{{ towns.currentPage == page ? 'active' : null }}">
+        <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+    </li>
+    {% endfor %}
+
+    {% if towns.lastPage > towns.currentPage %}
+    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (towns.currentPage+1) }) }}">Next &rarr;</a></li>
+    {% endif %}
+</ul>
+{% endif %}
