@@ -2,7 +2,7 @@
 
 [![Codacy](https://img.shields.io/codacy/ddb7e5ce0e1542058c0f3d9111a8876e.svg)](https://www.codacy.com/app/vojtasvoboda/oc-locationtowns-plugin)
 [![Scrutinizer Coverage](https://img.shields.io/scrutinizer/g/vojtasvoboda/oc-locationtowns-plugin.svg)](https://scrutinizer-ci.com/g/vojtasvoboda/oc-locationtowns-plugin/?branch=master)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vojtasvoboda/oc-cnbrates-plugin/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vojtasvoboda/oc-locationtowns-plugin/blob/master/LICENSE)
 
 Adds towns to states managed by RainLab.Location plugin. Required plugins: RainLab.Location.
 
@@ -60,8 +60,6 @@ $towns = $state->towns;
 
 ## TODO
 
-**Feel free to send pullrequest!**
-
 - !!fix fixed URL path at Town:114 and Town:129 (there should by path set in component)
 - !filter only by active states in towns component
 - directly extend RainLab.Location.State form to manage towns related to this state
@@ -70,10 +68,12 @@ $towns = $state->towns;
 - it is not possible to do october:down
 - add import and export
 
-## License
-
-LocationTown plugin is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT) same as OctoberCMS platform.
+**Feel free to send pullrequest!**
 
 ## Contributing
 
 Please send Pull Request to master branch.
+
+## License
+
+LocationTown plugin is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT) same as OctoberCMS platform.
