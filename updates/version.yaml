@@ -1,3 +1,5 @@
 1.0.1:
     - First version of LocationTown
     - create_towns_table.php
+1.0.2:
+    - Add localization for Brazil Portuguese, thanks to Amanda Tresbach

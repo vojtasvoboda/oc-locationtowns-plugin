@@ -1,5 +1,9 @@
 # Location Town plugin for OctoberCMS
 
+[![Codacy](https://img.shields.io/codacy/ddb7e5ce0e1542058c0f3d9111a8876e.svg)](https://www.codacy.com/app/vojtasvoboda/oc-locationtowns-plugin)
+[![Scrutinizer Coverage](https://img.shields.io/scrutinizer/g/vojtasvoboda/oc-locationtowns-plugin.svg)](https://scrutinizer-ci.com/g/vojtasvoboda/oc-locationtowns-plugin/?branch=master)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vojtasvoboda/oc-cnbrates-plugin/blob/master/LICENSE)
+
 Adds towns to states managed by RainLab.Location plugin. Required plugins: RainLab.Location.
 
 - component for state towns with pagination

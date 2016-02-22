@@ -62,7 +62,14 @@ class Plugin extends PluginBase
             $model->hasMany['towns'] = 'VojtaSvoboda\LocationTown\Models\Town';
         });
 
-        // Add location towns to sitemap
+        $this->initMenuItems();
+    }
+
+    /**
+     * Register new MenuItems, which is usefull for Sitemap and etc.
+     */
+    public function initMenuItems()
+    {
         Event::listen('pages.menuitem.listTypes', function() {
             return [
                 'location-town' => 'Location Town',
@@ -71,13 +78,16 @@ class Plugin extends PluginBase
         });
 
         Event::listen('pages.menuitem.getTypeInfo', function($type) {
-            if ($type == 'location-town' || $type == 'all-location-towns')
+            if ($type == 'location-town' || $type == 'all-location-towns') {
                 return Town::getMenuTypeInfo($type);
+            }
         });
 
         Event::listen('pages.menuitem.resolveItem', function($type, $item, $url, $theme) {
-            if ($type == 'location-town' || $type == 'all-location-towns')
+            if ($type == 'location-town' || $type == 'all-location-towns') {
                 return Town::resolveMenuItem($item, $url, $theme);
+            }
         });
     }
+
 }
