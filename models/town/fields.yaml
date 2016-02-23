@@ -9,10 +9,8 @@ fields:
         nameFrom: name
     name:
         label: Name
-        searchable: true
     slug:
         label: URL
-        searchable: true
         preset:
             field: name
             type: slug
