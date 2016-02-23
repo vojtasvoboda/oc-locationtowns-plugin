@@ -10,16 +10,14 @@ columns:
         label: Name
         searchable: true
     state:
+        label: State
         relation: state
         select: name
     slug:
-        name: URL
+        label: URL
         searchable: true
-        preset:
-            field: name
-            type: slug
     excerpt:
-        name: Excerpt
+        label: Excerpt
     is_enabled:
         label: Enabled
-        type: checkbox
+        type: switch
