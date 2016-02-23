@@ -29,4 +29,22 @@ return [
         'page' => 'Town detail page',
         'page_description' => 'Name of the town page file for the town links. This property is used by the default component partial.',
     ],
+    'form' => [
+        'create_town' => 'Create Town',
+        'edit_town' => 'Edit Town',
+        'preview_town' => 'Edit Town',
+        'return_to_list' => 'Return to towns list',
+    ],
+    'list' => [
+        'manage_towns' => 'Manage Towns',
+        'new' => 'New Town',
+    ],
+    'fields' => [
+        'name' => 'Name',
+        'state' => 'State',
+        'url' => 'URL',
+        'excerpt' => 'Excerpt',
+        'enabled' => 'Enabled',
+        'description' => 'Description',
+    ],
 ];

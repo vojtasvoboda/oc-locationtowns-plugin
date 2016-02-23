@@ -16,16 +16,16 @@ defaultRedirect: vojtasvoboda/locationtown/towns
 
 # Create page
 create:
-    title: Create Town
+    title: vojtasvoboda.locationtown::lang.form.create_town
     redirect: vojtasvoboda/locationtown/towns
     redirectClose: vojtasvoboda/locationtown/towns
 
 # Update page
 update:
-    title: Edit Town
+    title: vojtasvoboda.locationtown::lang.form.edit_town
     redirect: vojtasvoboda/locationtown/towns
     redirectClose: vojtasvoboda/locationtown/towns
 
 # Preview page
 preview:
-    title: Preview Town
+    title: vojtasvoboda.locationtown::lang.form.preview_town

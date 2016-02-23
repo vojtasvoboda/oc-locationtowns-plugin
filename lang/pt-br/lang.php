@@ -29,4 +29,22 @@ return [
         'page' => 'Página de detalhes da cidade',
         'page_description' => 'Nome de arquivo da página de cidades para a qual os links de cidade devem ser gerados. Esta propriedade é usada pelo bloco default do componente.',
     ],
+    'form' => [
+        'create_town' => 'Inserir Cidade',
+        'edit_town' => 'Editar Cidade',
+        'preview_town' => 'Visualizar Cidade',
+        'return_to_list' => 'Retornar à lista de cidades',
+    ],
+    'list' => [
+        'manage_towns' => 'Gerenciar cidades',
+        'new' => 'Nova cidade',
+    ],
+    'fields' => [
+        'name' => 'Nome',
+        'state' => 'Estado',
+        'url' => 'URL',
+        'excerpt' => 'Resumo',
+        'enabled' => 'Habilitada',
+        'description' => 'Descrição',
+    ],
 ];
