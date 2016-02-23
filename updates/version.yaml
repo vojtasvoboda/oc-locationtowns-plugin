@@ -3,3 +3,5 @@
     - create_towns_table.php
 1.0.2:
     - Add localization for Brazil Portuguese, thanks to Amanda Tresbach
+1.0.3:
+    - Fix backend form and listing labels
