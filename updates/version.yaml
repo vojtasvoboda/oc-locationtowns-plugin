@@ -5,3 +5,7 @@
     - Add localization for Brazil Portuguese, thanks to Amanda Tresbach
 1.0.3:
     - Fix backend form and listing labels
+1.0.4:
+    - Make all fields and labels translatable
+1.0.5:
+    - Add cs_CZ locale

@@ -32,7 +32,7 @@ return [
     'form' => [
         'create_town' => 'Create Town',
         'edit_town' => 'Edit Town',
-        'preview_town' => 'Edit Town',
+        'preview_town' => 'Preview Town',
         'return_to_list' => 'Return to towns list',
     ],
     'list' => [
