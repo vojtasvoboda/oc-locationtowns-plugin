@@ -4,22 +4,22 @@
 
 fields:
     state:
-        label: State
+        label: vojtasvoboda.locationtown::lang.fields.state
         type: relation
         nameFrom: name
     name:
-        label: Name
+        label: vojtasvoboda.locationtown::lang.fields.name
     slug:
-        label: URL
+        label: vojtasvoboda.locationtown::lang.fields.url
         preset:
             field: name
             type: slug
     excerpt:
-        label: Excerpt
+        label: vojtasvoboda.locationtown::lang.fields.excerpt
     description:
-        name: Description
+        label: vojtasvoboda.locationtown::lang.fields.description
         type: richeditor
         size: huge
     is_enabled:
-        label: Enabled
+        label: vojtasvoboda.locationtown::lang.fields.enabled
         type: checkbox

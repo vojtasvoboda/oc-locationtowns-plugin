@@ -7,17 +7,17 @@ columns:
         label: ID
         searchable: true
     name:
-        label: Name
+        label: vojtasvoboda.locationtown::lang.fields.name
         searchable: true
     state:
-        label: State
+        label: vojtasvoboda.locationtown::lang.fields.state
         relation: state
         select: name
     slug:
-        label: URL
+        label: vojtasvoboda.locationtown::lang.fields.url
         searchable: true
     excerpt:
-        label: Excerpt
+        label: vojtasvoboda.locationtown::lang.fields.excerpt
     is_enabled:
-        label: Enabled
+        label: vojtasvoboda.locationtown::lang.fields.enabled
         type: switch

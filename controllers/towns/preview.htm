@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('vojtasvoboda/locationtown/towns') ?>">Towns</a></li>
+        <li><a href="<?= Backend::url('vojtasvoboda/locationtown/towns') ?>"><?= e(trans('vojtasvoboda.locationtown::lang.towns.title')) ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -14,6 +14,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('vojtasvoboda/locationtown/towns') ?>" class="btn btn-default">Return to towns list</a></p>
+    <p><a href="<?= Backend::url('vojtasvoboda/locationtown/towns') ?>" class="btn btn-default"><?= e(trans('vojtasvoboda.locationtown::lang.form.return_to_list')) ?></a></p>
 
 <?php endif ?>

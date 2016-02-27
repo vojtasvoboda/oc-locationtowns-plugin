@@ -9,7 +9,7 @@ list: $/vojtasvoboda/locationtown/models/town/columns.yaml
 modelClass: VojtaSvoboda\LocationTown\Models\Town
 
 # List Title
-title: Manage Towns
+title: vojtasvoboda.locationtown::lang.list.manage_towns
 
 # Link URL for each record
 recordUrl: vojtasvoboda/locationtown/towns/update/:id
