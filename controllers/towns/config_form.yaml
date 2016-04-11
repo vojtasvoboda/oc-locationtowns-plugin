@@ -6,7 +6,7 @@
 name: Town
 
 # Model Form Field configuration
-form: $/vojtasvoboda/locationtown/models/town/fields.yaml
+form: ~/vojtasvoboda/locationtown/models/town/fields.yaml
 
 # Model Class name
 modelClass: VojtaSvoboda\LocationTown\Models\Town
