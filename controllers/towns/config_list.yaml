@@ -3,7 +3,7 @@
 # ===================================
 
 # Model List Column configuration
-list: ~/vojtasvoboda/locationtown/models/town/columns.yaml
+list: $/vojtasvoboda/locationtown/models/town/columns.yaml
 
 # Model Class name
 modelClass: VojtaSvoboda\LocationTown\Models\Town

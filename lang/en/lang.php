@@ -42,7 +42,7 @@ return [
     'fields' => [
         'name' => 'Name',
         'state' => 'State',
-        'url' => 'URL',
+        'url' => 'Slug',
         'excerpt' => 'Excerpt',
         'enabled' => 'Enabled',
         'description' => 'Description',

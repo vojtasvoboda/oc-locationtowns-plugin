@@ -47,5 +47,4 @@ class CreateTownsTable extends Migration
 
         return array_key_exists($pluginName, $pluginManager->getPlugins());
     }
-
 }

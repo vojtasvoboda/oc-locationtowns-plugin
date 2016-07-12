@@ -4,12 +4,16 @@
 [![Scrutinizer Coverage](https://img.shields.io/scrutinizer/g/vojtasvoboda/oc-locationtowns-plugin.svg)](https://scrutinizer-ci.com/g/vojtasvoboda/oc-locationtowns-plugin/?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vojtasvoboda/oc-locationtowns-plugin/blob/master/LICENSE)
 
-Adds towns to states managed by RainLab.Location plugin. Required plugins: RainLab.Location.
+Adds towns to states managed by RainLab.Location plugin. Included:
 
 - component for state towns with pagination
 - component for Town detail
 - hooks for RainLab.Sitemap
 - extends RainLab State model
+
+Required plugins: RainLab.Location.
+
+Tested with latest stable build 349.
 
 ## Render Town detail
 

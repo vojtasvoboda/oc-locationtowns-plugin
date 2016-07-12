@@ -42,7 +42,7 @@ return [
     'fields' => [
         'name' => 'Nome',
         'state' => 'Estado',
-        'url' => 'URL',
+        'url' => 'Ident',
         'excerpt' => 'Resumo',
         'enabled' => 'Habilitada',
         'description' => 'Descrição',

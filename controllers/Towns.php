@@ -24,5 +24,4 @@ class Towns extends Controller
         BackendMenu::setContext('October.System', 'system', 'settings');
         SettingsManager::setContext('VojtaSvoboda.LocationTown', 'locationtown');
     }
-
 }

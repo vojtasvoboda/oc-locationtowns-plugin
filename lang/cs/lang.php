@@ -42,7 +42,7 @@ return [
     'fields' => [
         'name' => 'Název',
         'state' => 'Stát',
-        'url' => 'URL',
+        'url' => 'Identifikátor',
         'excerpt' => 'Výňatek',
         'enabled' => 'Aktivní',
         'description' => 'Popisek',

@@ -45,7 +45,7 @@ class Plugin extends PluginBase
             'locationtown' => [
                 'label' => 'vojtasvoboda.locationtown::lang.settings.label',
                 'description' => 'vojtasvoboda.locationtown::lang.settings.description',
-                'category' => 'Locations',
+                'category' => 'rainlab.location::lang.plugin.name',
                 'icon' => 'icon-building-o',
                 'url' => Backend::url('vojtasvoboda/locationtown/towns'),
                 'order' => 500,
@@ -89,5 +89,4 @@ class Plugin extends PluginBase
             }
         });
     }
-
 }
