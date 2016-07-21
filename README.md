@@ -13,7 +13,7 @@ Adds towns to states managed by RainLab.Location plugin. Included:
 
 Required plugins: RainLab.Location.
 
-Tested with latest stable build 349.
+Tested with the latest stable OctoberCMS build 349.
 
 ## Render Town detail
 
