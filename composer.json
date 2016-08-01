@@ -1,6 +1,9 @@
 {
     "name": "vojtasvoboda/oc-locationtowns-plugin",
     "type": "october-plugin",
+    "extra": {
+        "installer-name": "locationtowns"
+    },
     "description": "Adds towns to states managed by RainLab.Location plugin.",
     "homepage": "https://github.com/vojtasvoboda/oc-locationtowns-plugin",
     "keywords": ["october", "plugin", "location", "town", "city"],
