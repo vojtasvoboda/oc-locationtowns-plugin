@@ -1,5 +1,6 @@
 <?php namespace VojtaSvoboda\LocationTown\Models;
 
+use Form;
 use URL;
 use Model;
 
@@ -14,8 +15,8 @@ class Town extends Model
     public $table = 'vojtasvoboda_locationtown_towns';
 
     public $rules = [
-        'name' => 'required',
-        'slug' => 'required|url',
+        'name'       => 'required',
+        'slug'       => 'required|url',
         'is_enabled' => 'boolean'
     ];
 
@@ -39,13 +40,13 @@ class Town extends Model
     /**
      * Sets the "url" attribute with a URL to this object
      *
-     * @param string $pageName
+     * @param string                 $pageName
      * @param Cms\Classes\Controller $controller
      */
     public function setUrl($pageName, $controller)
     {
         $params = [
-            'id' => $this->id,
+            'id'   => $this->id,
             'slug' => $this->slug,
         ];
 
@@ -55,6 +56,33 @@ class Town extends Model
     public function scopeIsEnabled($query)
     {
         return $query->where('is_enabled', true);
+    }
+
+    /**
+     * @var array Cache for nameList() method
+     */
+    protected static $nameList = [];
+
+    public static function getNameList($stateId)
+    {
+        if (isset(self::$nameList[$stateId])) {
+            return self::$nameList[$stateId];
+        }
+
+        return self::$nameList[$stateId] = self::whereStateId($stateId)->orderBy('name', 'asc')->lists('name', 'id');
+    }
+
+    /**
+     * @param string   $name
+     * @param null|int $stateId
+     * @param null|int $selectedValue
+     * @param array    $options
+     *
+     * @return string
+     */
+    public static function formSelect($name, $stateId = null, $selectedValue = null, $options = [])
+    {
+        return Form::select($name, self::getNameList($stateId), $selectedValue, $options);
     }
 
     //--- pages.menuitem handlers
@@ -98,10 +126,11 @@ class Town extends Model
     /**
      * Handler for the pages.menuitem.resolveItem event.
      *
-     * @param \RainLab\Pages\Classes\MenuItem $item Specifies the menu item.
-     * @param \Cms\Classes\Theme $theme Specifies the current theme.
-     * @param string $url Specifies the current page URL, normalized, in lower case
-     * The URL is specified relative to the website root, it includes the subdirectory name, if any.
+     * @param \RainLab\Pages\Classes\MenuItem $item  Specifies the menu item.
+     * @param \Cms\Classes\Theme              $theme Specifies the current theme.
+     * @param string                          $url   Specifies the current page URL, normalized, in lower case
+     *                                               The URL is specified relative to the website root, it includes the
+     *                                               subdirectory name, if any.
      *
      * @return mixed Returns an array. Returns null if the item cannot be resolved.
      */
@@ -116,11 +145,10 @@ class Town extends Model
             $stateCode = $state->code;
 
             $result = [];
-            $result['url'] = URL::to('/kontakty/' . $stateCode . '/' . $town->slug);
+            $result['url'] = URL::to('/kontakty/'.$stateCode.'/'.$town->slug);
             $result['isActive'] = false;
             $result['mtime'] = $town->updated_at;
-        }
-        elseif ($item->type == 'all-location-towns') {
+        } elseif ($item->type == 'all-location-towns') {
             $result = [
                 'items' => []
             ];
@@ -130,9 +158,9 @@ class Town extends Model
                 $state = $town->state;
                 $stateCode = $state->code;
                 $townItem = [
-                    'title' => $town->name,
-                    'url'   => URL::to('/kontakty/' . $stateCode . '/' . $town->slug),
-                    'mtime' => $town->updated_at,
+                    'title'    => $town->name,
+                    'url'      => URL::to('/kontakty/'.$stateCode.'/'.$town->slug),
+                    'mtime'    => $town->updated_at,
                     'isActive' => false,
                 ];
 

@@ -54,6 +54,19 @@ class Plugin extends PluginBase
         ];
     }
 
+    /**
+     * Register new Twig variables
+     * @return array
+     */
+    public function registerMarkupTags()
+    {
+        return [
+            'functions' => [
+                'form_select_town' => ['VojtaSvoboda\LocationTown\Models\Town', 'formSelect'],
+            ]
+        ];
+    }
+
     public function boot()
     {
         $this->app->bind('locationtowns', 'VojtaSvoboda\LocationTown\Models\Town');
