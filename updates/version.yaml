@@ -7,3 +7,4 @@
 1.0.5: Add cs_CZ locale
 1.0.6: Fix YAML config paths for last OctoberCMS build
 1.0.7: Add composer.json, minor fixes for OctoberCMS stable release
+1.0.8: Add form_select_town markup and TownModel Behavior, thanks to Alvaro Cánepa
