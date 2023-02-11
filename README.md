@@ -42,6 +42,53 @@ Just install RainLab.Sitemap plugin and insert one town or all towns to sitemap:
 
 ![Towns in sitemap](assets/images/locationtowns-sitemap-integration.png)
 
+## Front-end usage
+
+Following [example from Location plugin](https://github.com/rainlab/location-plugin#front-end-usage) this plugin just adds `form_select_town` function:
+
+```
+{% set countryId = countryId|default(form_value('country_id')) %}
+{% set stateId = stateId|default(form_value('state_id')) %}
+{% set townId = townId|default(form_value('town_id')) %}
+
+{{ form_open() }}
+    <div class="form-group">
+        <label for="accountCountry">Country</label>
+        {{ form_select_country('country_id', countryId, {
+            id: 'accountCountry',
+            class: 'form-control',
+            emptyOption: '',
+            'data-request': 'onInit',
+            'data-request-update': {
+                'country-state': '#partialCountryState'
+            }
+        }) }}
+    </div>
+
+    <div class="form-group">
+        <label for="accountState">State</label>
+        {{ form_select_state('state_id', countryId, stateId, {
+            id: 'accountState',
+            class: 'form-control',
+            emptyOption: '',
+            'data-request': 'onInit',
+            'data-request-update': {
+                'country-state': '#partialCountryState'
+            }
+        }) }}
+    </div>
+
+    <div class="form-group">
+        <label for="accountTown">Town</label>
+        {{ form_select_town('town_id', stateId, townId, {
+            id: 'accountTown',
+            class: 'form-control',
+            emptyOption: ''
+        }) }}
+    </div>
+{{ form_close() }}
+```
+
 ## Services
 
 List of available services provided by plugin:
